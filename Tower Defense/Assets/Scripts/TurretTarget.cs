@@ -11,7 +11,7 @@ public class TurretTarget : MonoBehaviour
     {
         if (AoE.Targets.Count > 0)
         {
-            Model.transform.LookAt(AoE.Targets[0]);
+            Model.transform.LookAt(AoE.Targets[0].transform);
         }
     }
 }

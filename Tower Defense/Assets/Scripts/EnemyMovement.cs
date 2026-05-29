@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour
    
     void Start()
     {
+        if (Target == null) { return; }
         transform.position = Target.transform.position;
     }
 

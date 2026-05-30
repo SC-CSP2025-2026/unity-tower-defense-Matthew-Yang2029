@@ -18,7 +18,10 @@ public class Projectile : MonoBehaviour
         }
 
         Vector3 direction = Target.position - transform.position;
-        float distance = direction.magnitude;
+        transform.rotation = Quaternion.LookRotation(direction);
+        transform.position = Vector3.MoveTowards(transform.position, Target.position, Speed * Time.deltaTime);
+
+        float distance = (Target.position - transform.position).magnitude;
 
         if (distance <= Mathf.Epsilon)
         {
@@ -30,8 +33,5 @@ public class Projectile : MonoBehaviour
             Object.Destroy(gameObject);
             return;
         }
-
-        transform.rotation = Quaternion.LookRotation(direction);
-        transform.position = Vector3.MoveTowards(transform.position, Target.position, Speed * Time.deltaTime);
     }
 }

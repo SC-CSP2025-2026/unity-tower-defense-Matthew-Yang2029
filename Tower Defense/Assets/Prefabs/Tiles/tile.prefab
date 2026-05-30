@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1599694600265185000}
+  - component: {fileID: 3821475600265185001}
   m_Layer: 0
   m_Name: tile
   m_TagString: Untagged
@@ -32,6 +33,22 @@ Transform:
   - {fileID: 5312970046502486525}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3821475600265185001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4672035056235515947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5454c912ebb774eda947b94571ec3cf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <IsOccupied>k__BackingField: 0
+  OnCursorEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4823538506873838407
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,6 +60,8 @@ GameObject:
   - component: {fileID: 5312970046502486525}
   - component: {fileID: 9085077177503665752}
   - component: {fileID: 6480779674666252946}
+  - component: {fileID: 6448520780892724704}
+  - component: {fileID: 7040762937985773340}
   m_Layer: 0
   m_Name: model
   m_TagString: Untagged
@@ -118,3 +137,69 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6448520780892724704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823538506873838407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af89c584d9510464c80a882a3813c42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <OnEnter>k__BackingField:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3821475600265185001}
+        m_TargetAssemblyTypeName: TileController, Assembly-CSharp
+        m_MethodName: NotifyCursorEnter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  <OnExit>k__BackingField:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3821475600265185001}
+        m_TargetAssemblyTypeName: TileController, Assembly-CSharp
+        m_MethodName: NotifyCursorExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument:
+          m_BoolArgument: 0
+        m_CallState: 2
+  <OnClick>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!65 &7040762937985773340
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823538506873838407}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.19999999, z: 1}
+  m_Center: {x: 0, y: 0.099999994, z: 0}

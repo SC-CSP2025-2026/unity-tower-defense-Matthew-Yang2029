@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1599694600265185000}
   - component: {fileID: 3821475600265185001}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,6 +49,12 @@ MonoBehaviour:
   OnCursorEnter:
     m_PersistentCalls:
       m_Calls: []
+  OnCursorExit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCursorClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4823538506873838407
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +68,7 @@ GameObject:
   - component: {fileID: 6480779674666252946}
   - component: {fileID: 6448520780892724704}
   - component: {fileID: 7040762937985773340}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,12 +182,24 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument:
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   <OnClick>k__BackingField:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3821475600265185001}
+        m_TargetAssemblyTypeName: TileController, Assembly-CSharp
+        m_MethodName: NotifyCursorClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &7040762937985773340
 BoxCollider:
   m_ObjectHideFlags: 0

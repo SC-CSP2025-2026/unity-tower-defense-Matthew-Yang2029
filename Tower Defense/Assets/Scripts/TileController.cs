@@ -6,10 +6,17 @@ public class TileController : MonoBehaviour
     [field: SerializeField]
     public bool IsOccupied { get; private set; } = false;
 
+    public void SetOccupied(bool occupied)
+    {
+        IsOccupied = occupied;
+    }
+
     [field: SerializeField]
     public UnityEvent<TileController> OnCursorEnter;
     [field: SerializeField]
     public UnityEvent<TileController> OnCursorExit;
+    [field: SerializeField]
+    public UnityEvent<TileController> OnCursorClick;
 
     public void NotifyCursorEnter()
     {
@@ -19,5 +26,10 @@ public class TileController : MonoBehaviour
     public void NotifyCursorExit()
     {
         OnCursorExit.Invoke(this);
+    }
+
+    public void NotifyCursorClicked()
+    {
+        OnCursorClick.Invoke(this);
     }
 }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3219641751510808464}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bridge Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7455769021582455012}
   - component: {fileID: 3757589513466461125}
   - component: {fileID: 2813385012663811414}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -26,7 +26,6 @@ public class MouseEvents : MonoBehaviour
 
     void OnMouseUpAsButton()
     {
-        transform.parent.gameObject.SetActive(false);
         OnClick.Invoke();
     }
 }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2089236498524832761}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: River Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 2786231159574078493}
   - component: {fileID: 1051150414041416970}
   - component: {fileID: 710211119217625386}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

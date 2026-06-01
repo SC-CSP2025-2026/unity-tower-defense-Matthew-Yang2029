@@ -14,6 +14,7 @@ public class TileCursor : MonoBehaviour
 
     void OnDisable()
     {
+        if (TargetGrid == null) { return; }
         StopListeningToTilesIn(TargetGrid);
     }
 

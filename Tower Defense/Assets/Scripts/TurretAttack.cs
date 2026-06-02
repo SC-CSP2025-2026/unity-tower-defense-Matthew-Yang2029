@@ -15,6 +15,7 @@ public class TurretAttack : MonoBehaviour
     {
         if (IsOnCooldown) return;
         if (AoE.Targets.Count == 0) return;
+        if (AoE.Targets[0] == null) { AoE.Targets.RemoveAt(0); return; }
         Fire();
         IsOnCooldown = true;
         Invoke(nameof(EndCooldown), CooldownTime);

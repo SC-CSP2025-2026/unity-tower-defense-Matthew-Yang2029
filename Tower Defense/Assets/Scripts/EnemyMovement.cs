@@ -5,6 +5,23 @@ public class EnemyMovement : MonoBehaviour
     [field: SerializeField]
     public float Speed { get; private set; } = 1f;
 
+    public float BaseSpeed { get; private set; }
+
+    void Awake()
+    {
+        BaseSpeed = Speed;
+    }
+
+    public void SetSpeed(float speed)
+    {
+        Speed = speed;
+    }
+
+    public void ResetSpeed()
+    {
+        Speed = BaseSpeed;
+    }
+
     [field: SerializeField]
     public Waypoint Target { get; set; }
    

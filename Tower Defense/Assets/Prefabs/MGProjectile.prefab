@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6731907081347819075}
   - component: {fileID: 1992924206922484366}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: MGProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,6 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e268942a2b424d3fb4ba8bee23bb17d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Speed>k__BackingField: 8
-  <Damage>k__BackingField: 1
+  <Speed>k__BackingField: 30
+  <Damage>k__BackingField: 0.5
   <Target>k__BackingField: {fileID: 0}

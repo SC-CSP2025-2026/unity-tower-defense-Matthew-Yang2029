@@ -11,7 +11,7 @@ public class GoldGenerator : MonoBehaviour
 
     void Awake()
     {
-        Controller = GetComponentInParent<PlayerController>();
+        Controller = FindFirstObjectByType<PlayerController>();
     }
 
     void OnEnable()

@@ -4,7 +4,7 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     [field: SerializeField]
-    public int Gold { get; private set; } = 200;
+    public int Gold { get; set; } = 200;
     [field: SerializeField]
     public TextMeshProUGUI InfoLabel { get; private set; }
 

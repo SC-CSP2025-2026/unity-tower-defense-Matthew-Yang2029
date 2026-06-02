@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7266352277862359134}
   - component: {fileID: 4904256460435836398}
   m_Layer: 0
-  m_Name: Turret
+  m_Name: MachineGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <AoE>k__BackingField: {fileID: 1792286890220921418}
-  <ProjectilePrefab>k__BackingField: {fileID: 1992924206922484366, guid: 5bb11d591e61e434293c13bf38ebbbcb, type: 3}
-  <CooldownTime>k__BackingField: 1
+  <ProjectilePrefab>k__BackingField: {fileID: 1992924206922484366, guid: 80ebffc45881d442ea066a0e4120f799, type: 3}
+  <CooldownTime>k__BackingField: 0.1
   <IsOnCooldown>k__BackingField: 0
 --- !u!1 &5642868227570178706
 GameObject:
@@ -274,6 +274,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 127074030945310781}
     m_Modifications:
+    - target: {fileID: 2173282902760833739, guid: 8331803c6a0204d0d8477b25c705075f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173282902760833739, guid: 8331803c6a0204d0d8477b25c705075f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2173282902760833739, guid: 8331803c6a0204d0d8477b25c705075f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

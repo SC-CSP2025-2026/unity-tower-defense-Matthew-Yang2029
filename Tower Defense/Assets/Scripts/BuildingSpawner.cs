@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class TurretSpawner : MonoBehaviour
+public class BuildingSpawner : MonoBehaviour
 {
     [field: SerializeField]
-    public GameObject TurretPrefab { get; private set; }
+    public BuildingData Selected { get; set; }
     [field: SerializeField]
     public GameObject TargetGrid { get; private set; }
     [field: SerializeField]
@@ -34,17 +34,18 @@ public class TurretSpawner : MonoBehaviour
 
     public void ShowInfo(TileController tileController)
     {
+        if (Selected == null) { return; }
         if (tileController.IsOccupied)
         {
             Controller.InfoLabel.text = "Cannot build here";
         }
-        else if (Controller.Gold < 50)
+        else if (Controller.Gold < Selected.Cost)
         {
             Controller.InfoLabel.text = "<color=red>Not Enough Gold</color>";
         }
         else
         {
-            Controller.InfoLabel.text = "50 Gold - Place Turret";
+            Controller.InfoLabel.text = $"{Selected.Cost} Gold - Place Turret";
         }
     }
 
@@ -55,18 +56,19 @@ public class TurretSpawner : MonoBehaviour
 
     public bool CanSpawn(TileController tileController)
     {
+        if (Selected == null) { return false; }
         if (tileController.IsOccupied) { return false; }
-        if (Controller.Gold < 50) { return false; }
+        if (Controller.Gold < Selected.Cost) { return false; }
         return true;
     }
 
     public void SpawnTurret(TileController tileController)
     {
         if (!CanSpawn(tileController)) { return; }
-        GameObject newTurret = Instantiate(TurretPrefab);
+        tileController.IsOccupied = true;
+        GameObject newTurret = Instantiate(Selected.BuildingPrefab, Controller.transform);
         newTurret.transform.position = tileController.transform.position;
-        tileController.SetOccupied(true);
-        Controller.SpendGold(50);
+        Controller.Gold -= Selected.Cost;
         gameObject.SetActive(false);
     }
 }
